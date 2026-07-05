@@ -1,0 +1,16 @@
+# Shell 脚本必须保留 LF，否则在 Linux/WSL 中可能无法直接执行。
+* text=auto eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.param text eol=lf
+*.table text eol=lf
+*.bin binary
+*.jpg binary
+*.png binary

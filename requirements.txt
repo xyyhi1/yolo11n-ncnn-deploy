@@ -1,0 +1,6 @@
+# 自动混合精度搜索、精度评估与绘图依赖。
+matplotlib>=3.7
+numpy>=1.24
+opencv-python>=4.8
+PyYAML>=6.0
+ultralytics>=8.4,<9

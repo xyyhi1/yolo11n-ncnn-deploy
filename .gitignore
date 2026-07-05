@@ -1,0 +1,18 @@
+build/
+models/source/
+models/eval/
+models/yolo11n_hit_uav_ncnn_int8/
+models/yolo11n_hit_uav_ncnn_int8_mixed_output_fp32/
+models/yolo11n_hit_uav_ncnn_int8_mixed_head_fp32/
+outputs/*.jpg
+calibration/images_letterbox_640/
+calibration/int8_calibration_images.txt
+search_artifacts/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.log
+
+# 内部实验说明和面试材料只保存在私有目录，避免误提交到公开仓库。
+docs/*.md
+results/*.md

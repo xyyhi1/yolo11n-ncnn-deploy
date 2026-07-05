@@ -1,0 +1,97 @@
+{
+  "selected_policy": "head_fp32",
+  "selection_rule": "在满足mAP50-95下降和模型大小约束的候选中选择端到端延迟最低者",
+  "constraints": {
+    "max_map_drop": 0.04,
+    "max_model_mib": 3.5
+  },
+  "graph": {
+    "final_layer": "cat_20",
+    "head_convolution_count": 25,
+    "terminal_convolutions": [
+      "conv_67",
+      "conv_70",
+      "conv_73",
+      "conv_76",
+      "conv_79",
+      "conv_82",
+      "conv_83"
+    ],
+    "anchor_scales": [
+      6400,
+      1600,
+      400
+    ]
+  },
+  "groups": [
+    "head"
+  ],
+  "fp32_layers": [
+    "conv_65",
+    "conv_66",
+    "conv_67",
+    "conv_68",
+    "conv_69",
+    "conv_70",
+    "conv_71",
+    "conv_72",
+    "conv_73",
+    "conv_74",
+    "conv_75",
+    "conv_76",
+    "conv_77",
+    "conv_78",
+    "conv_79",
+    "conv_80",
+    "conv_81",
+    "conv_82",
+    "conv_83",
+    "convdw_183",
+    "convdw_184",
+    "convdw_185",
+    "convdw_186",
+    "convdw_187",
+    "convdw_188"
+  ],
+  "metrics": {
+    "name": "head_fp32",
+    "groups": "head",
+    "fp32_layer_count": 25,
+    "model_mib": 3.0154800415039062,
+    "proxy_map50": 0.9042980457041336,
+    "proxy_map50_95": 0.595659617999718,
+    "full_precision": 0.8393416828737433,
+    "full_recall": 0.7830541318635572,
+    "full_map50": 0.8511540945071217,
+    "full_map50_95": 0.5602197088187928,
+    "map50_95_drop": 0.03835221884141293,
+    "runs": 100,
+    "inference_mean_ms": 22.435046999999994,
+    "end_to_end_mean_ms": 25.180387999999997,
+    "end_to_end_p50_ms": 25.739800000000002,
+    "end_to_end_p95_ms": 29.582945,
+    "fps": 39.71344683012828,
+    "pareto": true
+  },
+  "fp32_baseline": {
+    "name": "fp32",
+    "groups": "baseline",
+    "fp32_layer_count": 88,
+    "fp32_layers": "all",
+    "model_mib": 9.950313568115234,
+    "proxy_map50": 0.8337857762068814,
+    "proxy_map50_95": 0.5488885359941472,
+    "full_precision": 0.8645324439548421,
+    "full_recall": 0.8382020567213593,
+    "full_map50": 0.88430029971716,
+    "full_map50_95": 0.5985719276602057,
+    "map50_95_drop": 0.0,
+    "runs": 100,
+    "inference_mean_ms": 29.634865000000005,
+    "end_to_end_mean_ms": 31.308393000000006,
+    "end_to_end_p50_ms": 28.62675,
+    "end_to_end_p95_ms": 37.195205,
+    "fps": 31.94031709005313,
+    "pareto": true
+  }
+}
