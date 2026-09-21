@@ -357,22 +357,8 @@ models/yolo11n_hit_uav_ncnn_auto_mixed/
 
 自动搜索的实现细节以 `scripts/search_mixed_precision.py` 为准，全部候选实验记录位于 `results/mixed_precision_search.csv`。
 
-## 十一、建议阅读代码的顺序
 
-第一次阅读不要直接从 `main.cpp` 的第一行硬看到底，建议按以下顺序：
-
-1. 阅读 `include/yolo_ncnn.h`，先认识项目中的数据结构和接口。
-2. 阅读 `src/preprocess.cpp`，理解一张图片如何变成模型输入张量。
-3. 阅读 `src/yolo_ncnn.cpp`，理解模型如何加载以及 Blob 如何输入输出。
-4. 阅读 `src/postprocess.cpp`，重点理解输出布局、坐标还原和 NMS。
-5. 最后阅读 `src/main.cpp`，把参数解析、推理、计时和保存过程串成完整流程。
-6. 运行 `scripts/run_demo.sh`，对照终端日志逐步跟踪程序。
-
-每条有效代码上方都增加了中文说明。部分很短的括号、参数或容器操作，其注释用于说明语法角色；算法原理应结合所在函数上方的整体说明理解。
-
-## 十二、当前项目边界
-
-已经完成：
+## 十一、当前项目边界
 
 - YOLO11n 转 NCNN
 - FP32 CPU 推理
@@ -388,16 +374,8 @@ models/yolo11n_hit_uav_ncnn_auto_mixed/
 - 15组混合精度候选自动生成
 - 代理集筛选、Pareto分析与约束选择
 
-尚未完成：
 
-- NCNN Vulkan
-- Android NDK/JNI
-- PyTorch、ONNXRuntime、TensorRT、NCNN 四后端统一 Benchmark
-- 上游 Issue 或 PR
-
-尚未完成的内容不能提前作为已经实现的成果写入简历。
-
-## 十三、数据来源与引用
+## 十二、数据来源与引用
 
 训练和演示图片来自 [HIT-UAV](https://github.com/suojiashun/HIT-UAV-Infrared-Thermal-Dataset)，原数据集采用 CC BY 4.0 许可。仓库中的样例图是该数据集的子集，自动混合精度权重由本人训练的 YOLO11n 模型转换得到。
 
